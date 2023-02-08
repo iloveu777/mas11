@@ -15,17 +15,23 @@ namespace ConsoleApp46
             byte n = Convert.ToByte(Console.ReadLine());
             int[] array = new int[n];
             Random rnd = new Random();
-            for (int i=0; i<array.Length; i++)
+            for (int i = 0; i < array.Length; i++)
             {
                 array[i] = rnd.Next(-20, 20);
                 WriteLine($"array[{i}] = {array[i]}");
             }
             byte count = 0;
-            for (int i = 0; i<array.Length; i++)
+            /* for (int i = 0; i<array.Length; i++)
+             {
+                 if (array[i] < 0) count++;
+             }
+             WriteLine($"кол-во отриц. элементов ={count}");*/
+            foreach (int i in array)
             {
-                if (array[i] < 0) count++;
+                if (i < 0) count++;
+
             }
-            WriteLine($"кол-во отриц. элементов ={count}");
+            Console.WriteLine($"кол-во отриц чисел = {count}");
             ReadKey();
         }
         
