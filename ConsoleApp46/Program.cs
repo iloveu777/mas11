@@ -11,12 +11,14 @@ namespace ConsoleApp46
     {
         static void Main(string[] args)
         {
-            int[] massive = new int[8];
+            Write("n=");
+            byte n = Convert.ToByte(Console.ReadLine());
+            int[] array = new int[n];
             Random rnd = new Random();
-            int i;
-            for(i=0; i<massive.Length; i++)
+            for (int i=0; i<array.Length; i++)
             {
-                massive[i] = rnd.Next(-10, 11);
+                array[i] = rnd.Next(-20, 20);
+                WriteLine($"array[{i}] = {array[i]}");
             }
 
         }
