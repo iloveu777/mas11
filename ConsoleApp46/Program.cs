@@ -20,7 +20,14 @@ namespace ConsoleApp46
                 array[i] = rnd.Next(-20, 20);
                 WriteLine($"array[{i}] = {array[i]}");
             }
-
+            byte count = 0;
+            for (int i = 0; i<array.Length; i++)
+            {
+                if (array[i] < 0) count++;
+            }
+            WriteLine($"кол-во отриц. элементов ={count}");
+            ReadKey();
         }
+        
     }
 }
