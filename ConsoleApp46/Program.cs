@@ -26,12 +26,12 @@ namespace ConsoleApp46
                  if (array[i] < 0) count++;
              }
              WriteLine($"кол-во отриц. элементов ={count}");*/
-            foreach (int i in array)
+            foreach (int num in array)
             {
-                if (i < 0) count++;
+                if (num < 0) count++;
 
             }
-            Console.WriteLine($"кол-во отриц чисел = {count}");
+            WriteLine($"кол-во отриц чисел = {count}");
             ReadKey();
         }
         
